@@ -1,0 +1,27 @@
+{
+    "author": "canerakdas@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "fishy",
+    "pebble": {
+        "displayName": "Never Trust Fish",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "rocky",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "basalt",
+            "chalk",
+            "diorite",
+            "emery"
+        ],
+        "uuid": "28b22115-d40a-4515-8fb8-e108c6be44ec",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
