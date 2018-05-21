@@ -6,7 +6,7 @@ var rocky = require('rocky');
  * @return {int}
  */
 var randNumber = function(min, max) {
-  return parseInt(Math.random() * (max - min) + min);
+  return Math.floor(Math.random() * (max - min) ) + min;
 };
 
 /**
@@ -65,27 +65,27 @@ rocky.on('draw', function(event) {
   // Left top
   var r1 = randNumber(0, w/2);
   var r2 = randNumber(0, 50);
-  drawFish(r1, r2, "#555555", ctx,randNumber(1, 4),randNumber(1, 4));
+  drawFish(r1, r2, "#555555", ctx,randNumber(1, 2),randNumber(1, 2));
 
   // Right top
   var r3 = randNumber(w/2, w);
   var r4 = randNumber(0, 50);
-  drawFish(r3, r4, "#555555", ctx,randNumber(1, 4),randNumber(1, 4));
+  drawFish(r3, r4, "#555555", ctx,randNumber(1, 2),randNumber(1, 2));
 
   // Left bottom
   var r5 = randNumber(0, w/2);
   var r6 = randNumber(h / 2 + 25, h);
-  drawFish(r5, r6, "#555555", ctx,randNumber(1, 4),randNumber(1, 4));
+  drawFish(r5, r6, "#555555", ctx,randNumber(1, 2),randNumber(1, 2));
 
   // Right bottom
   var r7 = randNumber(w/2, w);
   var r8 = randNumber(h / 2 + 25, h);
-  drawFish(r7, r8, "#555555", ctx,randNumber(1, 4),randNumber(1, 4));
+  drawFish(r7, r8, "#555555", ctx,randNumber(1, 2),randNumber(1, 2));
 
   // Random \o/
   var r9 = randNumber(0, w);
   var r10 = randNumber(0, h);
-  drawFish(r9, r10, "#555555", ctx,randNumber(1, 4),randNumber(1, 4));
+  drawFish(r9, r10, "#555555", ctx,randNumber(1, 2),randNumber(1, 2));
   
   // Center align the text
   ctx.textAlign = 'center';
@@ -100,7 +100,7 @@ rocky.on('draw', function(event) {
   // Random text
   var randomString = ["Never Trust Fish", "<*))))><", "fishy, fishy..","Loading.."];
   // TODO : IDK how to work this random shit ^^,
-  var rs1 = randNumber(0, randomString.length + 2);
+  var rs1 = randNumber(0, randomString.length);
   // Random text color
   var colorList = ["#ff5453","#ffff01","#02fe02","#00ffff"];
   // Font settings
